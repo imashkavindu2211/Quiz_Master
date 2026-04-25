@@ -96,6 +96,7 @@ export default function EditQuizPage() {
         timeLimit: q.timeLimit,
         explanation: q.explanation,
         imageUrl: q.imageUrl,
+        explanationImageUrl: q.explanationImageUrl,
         options: q.options.map(opt => ({ text: opt.text, isCorrect: opt.isCorrect }))
       }))
     });

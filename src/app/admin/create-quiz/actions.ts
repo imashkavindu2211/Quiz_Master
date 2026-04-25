@@ -135,6 +135,7 @@ export async function fetchQuizPack(id: string) {
       category_id: pack.category_id,
       publish_date: pack.publish_date,
       questions: pack.questions.map((q: any) => ({
+        id: q.id,
         text: q.question_text,
         timeLimit: q.time_limit,
         explanation: q.explanation,
