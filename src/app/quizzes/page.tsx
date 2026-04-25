@@ -200,8 +200,14 @@ function QuizzesContent() {
                     <div className={cn(
                       "absolute top-0 right-0 rounded-bl-[5rem] transition-transform duration-700",
                       viewMode === 'grid' ? "w-32 h-32 -mr-8 -mt-8" : "w-16 h-16 opacity-0 md:opacity-100",
-                      isCompleted ? "bg-slate-100" : "bg-rose-50 group-hover:scale-150"
-                    )}></div>
+                      isCompleted ? "bg-emerald-600" : "bg-rose-50 group-hover:scale-150"
+                    )}>
+                      {isCompleted && (
+                        <div className="absolute bottom-6 left-6 text-white animate-in zoom-in-50 duration-500">
+                          <CheckCircle2 className="w-8 h-8" />
+                        </div>
+                      )}
+                    </div>
                     
                     <div className={cn(
                       "relative z-10 flex items-center",

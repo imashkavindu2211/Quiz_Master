@@ -376,10 +376,12 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ id: strin
                   </button>
                 ) : (
                   <button
-                    onClick={() => setShowExplanation(true)}
+                    onClick={quiz.questions[currentQuestionIndex].explanation ? () => setShowExplanation(true) : handleNextQuestion}
                     className="w-full py-5 bg-slate-900 text-white rounded-2xl font-black uppercase tracking-widest text-xs shadow-xl transition-all hover:bg-rose-600 active:scale-95 flex items-center justify-center gap-2"
                   >
-                    View Explanation
+                    {quiz.questions[currentQuestionIndex].explanation 
+                      ? 'View Explanation' 
+                      : (currentQuestionIndex === quiz.questions.length - 1 ? 'Finalize Results' : 'Continue to Next Question')}
                     <ChevronRight className="w-4 h-4" />
                   </button>
                 )}
