@@ -52,6 +52,7 @@ export default function EditQuizPage() {
       timeLimit: 30,
       explanation: '',
       imageUrl: '',
+      explanationImageUrl: '',
       options: [
         { text: '', isCorrect: true },
         { text: '', isCorrect: false },
